@@ -5,12 +5,12 @@ pipeline {
         maven 'Maven3'
     }
     stages{
-         stage("Cleanup Workspace"){
+        stage("Cleanup Workspace"){
                 steps {
                 cleanWs()
                 }
         stage("Checkout from SCM"){
-                steps {
+               steps {
                     git branch: 'main', credentialsId: 'github' , url: 'https://github.com/CloudRespoProject/Registerapp'
                 }
         }
