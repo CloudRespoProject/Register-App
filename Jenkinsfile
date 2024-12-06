@@ -12,7 +12,7 @@ pipeline {
         }
         stage("Checkout from SCM"){
                steps {
-                    git branch:'main', credentialsId:'github',url:'https://github.com/CloudRespoProject/Register-App'
+                   git branch:'main', credentialsId:'github',url:'https://github.com/CloudRespoProject/Register-App'
                 }
         }
         stage("Build Application"){
